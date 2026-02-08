@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * to distinguish from other similar projects. Inherits common inventory properties
  * from {@link NiranInventoryItem}.
  */
-public class NiranEquipment extends NiranInventoryItem {
+public class Equipment extends InventoryItem {
     private String brandName; // renamed from brand
 
     /**
@@ -19,7 +19,7 @@ public class NiranEquipment extends NiranInventoryItem {
      * @param price        purchase price
      * @param warrantyEnd  warranty expiration date
      */
-    public NiranEquipment(String id, String name, String brandName, LocalDate purchaseDate, double price, LocalDate warrantyEnd) {
+    public Equipment(String id, String name, String brandName, LocalDate purchaseDate, double price, LocalDate warrantyEnd) {
         super(id, name, purchaseDate, price, warrantyEnd);
         this.brandName = brandName;
     }
@@ -44,7 +44,7 @@ public class NiranEquipment extends NiranInventoryItem {
 
     @Override
     public String toString() {
-        return String.format("[NiranEquipment] %s, Brand: %s, Maintenance Fee: %.2f", super.toString(), brandName,
+        return String.format("[Equipment] %s, Brand: %s, Maintenance Fee: %.2f", super.toString(), brandName,
                 getMaintenanceFee());
     }
 }
