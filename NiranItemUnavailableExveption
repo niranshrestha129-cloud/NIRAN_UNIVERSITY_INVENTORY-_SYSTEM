@@ -1,0 +1,19 @@
+/**
+ * Exception thrown when an inventory item cannot be assigned because it is
+ * currently unavailable. This could happen if the item is already assigned
+ * or temporarily removed from the inventory.
+ *
+ * This is a customized version to distinguish it from other projects.
+ */
+public class NiranItemUnavailableException extends Exception {
+
+    /**
+     * Creates a new exception with a detailed message explaining why
+     * the item is unavailable.
+     *
+     * @param message reason for the unavailability
+     */
+    public NiranItemUnavailableException(String message) {
+        super(message);
+    }
+}
